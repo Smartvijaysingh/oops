@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class toolbooth {
+    static int a;
+    static Double b;
+    toolbooth()
+    {
+        a=0;
+        b=Double.valueOf(0);
+    }
+    void payingvehicle()
+    {
+       a++;
+       b+=50;
+    }
+    void notpayingvehicle()
+    {
+        a++;
+    }
+    void display()
+    {
+        System.out.println("total cost collected:"+b);
+    }
+}
+class shyam{
+            public static void main(String args[] )
+        {
+            Scanner read=new Scanner(System.in);
+           int choice;
+           toolbooth b1=new toolbooth();
+           while(true) {
+               System.out.println("1.paying vehicle 2. none paying vehicle 3.display");
+               choice = read.nextInt();
+               if (choice == 1)
+                   b1.payingvehicle();
+               else if (choice == 2)
+                   b1.notpayingvehicle();
+               else
+                   b1.display();
+           }
+        }
+        }v
