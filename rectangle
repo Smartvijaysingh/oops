@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+class rectangledetail
+{
+    double l,b,a;
+    String c;
+
+    void Setl()
+    {
+        Scanner read=new Scanner(System.in);
+       System.out.println("enter the lenght");
+       l=read.nextDouble();
+    }
+    void Setb()
+    {
+        Scanner read=new Scanner(System.in);
+        System.out.println("enter the bridth");
+        b=read.nextDouble();
+    }
+    void Setc()
+    {
+        Scanner read=new Scanner(System.in);
+        System.out.println("enter the colour");
+        c=read.nextLine();
+    }
+    Double Area()
+    {
+       a=l*b;
+       return a;
+    }
+}
+public class rectangle
+{
+    public static void main(String args[])
+    {
+
+        Double m1,m2;
+        rectangledetail r1=new rectangledetail();
+        r1.Setl();
+        r1.Setb();
+        r1.Setc();
+        rectangledetail r2=new rectangledetail();
+        r2.Setl();
+        r2.Setb();
+        r2.Setc();
+        if(r1.a==r2.a && (r1.c.compareTo(r2.c)==0))
+            System.out.println("matching:");
+        else
+            System.out.println("not matching");
+    }
+}
