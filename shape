@@ -1,0 +1,52 @@
+import java.util.Scanner;
+class rect extends shape{
+    void print_area()
+    {
+        Scanner read=new Scanner(System.in);
+        shape s=new rect();
+        System.out.println("enter the length and width of the rectangle:");
+        s.a=read.nextInt();
+        s.b=read.nextInt();
+       System.out.println("area of rectangle is:"+s.a*s.b);
+
+    }
+}
+class triangle extends shape{
+    void print_area()
+    {
+        Scanner read=new Scanner(System.in);
+        shape s=new triangle();
+        System.out.println("enter the length and width of the triangle:");
+        s.a=read.nextInt();
+        s.b=read.nextInt();
+        System.out.println("area of rectangle is:"+s.a*s.b);
+
+    }
+}
+class circle extends shape{
+    void print_area()
+    {
+        Scanner read=new Scanner(System.in);
+        shape s=new circle();
+        System.out.println("enter the radius of the circle:");
+        s.a=read.nextInt();
+        System.out.println("area of rectangle is:"+s.a*s.b*3.14);
+    }
+}
+abstract class shape{
+    int a,b;
+    abstract void print_area();
+}
+class ram
+{
+   public static void main(String args[])
+        {
+          shape p=new rect();
+          p.print_area();
+        shape q=new triangle();
+        q.print_area();
+        shape r=new circle();
+        r.print_area();
+
+        }
+}
