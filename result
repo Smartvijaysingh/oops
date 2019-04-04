@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class names
+{
+    public static void main(String args[])
+    {
+        Scanner read=new Scanner(System.in);
+        int m,n,result;
+        char c;
+        System.out.println("enter the first number");
+        m=read.nextInt();
+        System.out.println("enter the operator");
+        c=read.next().charAt(0);
+        System.out.println("enter the second number");
+        n=read.nextInt();
+        if(c=='+')
+            result=m+n;
+        else if(c=='-')
+            result=m-n;
+        else if(c=='*')
+            result=m*n;
+        else
+            result=m/n;
+        System.out.println("result is:"+result);
+    }
+}
